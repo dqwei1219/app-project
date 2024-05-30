@@ -36,7 +36,7 @@ const fetchAllRepositories = async (repos_url) => {
       headers: {
         'accept': 'application/vnd.github+json',
         'X-GitHub-Api-Version': '2022-11-28',
-        'Authorization': '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'
+        'Authorization': ''
       },
     });
     const repos = await response.json();
@@ -75,7 +75,7 @@ app.get('/api/search/users', authenticateToken, async (req, res) => {
       headers: {
         'accept': 'application/vnd.github+json',
         'X-GitHub-Api-Version': '2022-11-28'},
-        'Authorization': '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'
+        'Authorization': ''
     });
     const data = await response.json();
     const userRetrieve = data.items.map(async (user) => {
